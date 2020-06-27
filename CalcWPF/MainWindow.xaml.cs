@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -10,6 +11,7 @@ namespace CalcWPF
         string rightop = "";//правый операнд
         string leftop = "";//левый операнд
         string operation = "";//знак операции
+        Regex regex = new Regex(@"^[1-9]\\d{1,2}$");
 
         public MainWindow()
         {
@@ -313,16 +315,31 @@ namespace CalcWPF
                         rightop = (num1 * num2).ToString();
                         break;
                     case "/":
-                        if (num2 != 0)
+                        if (num2 != 0 && rightop!="0")
                             rightop = (num1 / num2).ToString();
+                        else
+                        {
+                            MessageBox.Show("На ноль делить нельзя.");
+                            Clear();
+                        }
                         break;
                     case "MOD":
-                        if (num2 != 0)
+                        if (num2 != 0 && rightop != "0")
                             rightop = (num1 % num2).ToString();
+                        else
+                        {
+                            MessageBox.Show("На ноль делить нельзя.");
+                            Clear();
+                        }
                         break;
                     case "DIV":
-                        if (num2 != 0)
+                        if (num2 != 0 && rightop != "0")
                             rightop = Math.Truncate((double)num1 / num2).ToString();
+                        else
+                        {
+                            MessageBox.Show("На ноль делить нельзя.");
+                            Clear();
+                        }
                         break;
                     case "x^y":
                         rightop = Math.Pow(num1, num2).ToString();
@@ -335,6 +352,13 @@ namespace CalcWPF
                 textBlock.Text = "0";
                 MessageBox.Show("Некорректный ввод исходных данных.", "Ошибка.");
             }
+        }
+        private void Clear()
+        {
+            leftop = "";
+            rightop = "";
+            operation = "";
+            textBlock.Text = "0";
         }
 
     }
