@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aubva\\Desktop\\lab666\\CalcLibrary\\CalcLibrary.csproj": {}
+    "C:\\Users\\aubva\\Desktop\\Lab6\\CalcLibrary\\CalcLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aubva\\Desktop\\lab666\\CalcLibrary\\CalcLibrary.csproj": {
+    "C:\\Users\\aubva\\Desktop\\Lab6\\CalcLibrary\\CalcLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aubva\\Desktop\\lab666\\CalcLibrary\\CalcLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\aubva\\Desktop\\Lab6\\CalcLibrary\\CalcLibrary.csproj",
         "projectName": "CalcLibrary",
-        "projectPath": "C:\\Users\\aubva\\Desktop\\lab666\\CalcLibrary\\CalcLibrary.csproj",
+        "projectPath": "C:\\Users\\aubva\\Desktop\\Lab6\\CalcLibrary\\CalcLibrary.csproj",
         "packagesPath": "C:\\Users\\aubva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aubva\\Desktop\\lab666\\CalcLibrary\\obj\\",
+        "outputPath": "C:\\Users\\aubva\\Desktop\\Lab6\\CalcLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
